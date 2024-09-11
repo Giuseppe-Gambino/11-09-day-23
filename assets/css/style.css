@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  font-family: "Roboto";
+  color: #732104;
+}
+body {
+  margin: 0;
+  background-color: #fffdf6;
+}
+
+header,
+main,
+footer {
+  margin: 0.5rem;
+}
+
+header {
+  background-color: #fef7e2;
+  border-radius: 6rem;
+  padding: 20px;
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* contenitore logo */
+.logo {
+  background-color: #ffdf7f;
+  width: 18rem;
+  border-radius: 5rem;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* logo e testo */
+.logo img {
+  height: 3.5rem;
+}
+
+.logo span {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-left: 1.5rem;
+}
+
+/* nav bar */
+nav {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.btnMenu {
+  background-color: #ffdf7f;
+  border-radius: 5rem;
+  padding-inline: 10px;
+  padding-block: 15px;
+  width: 8rem;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.btnMenu span {
+  font-size: 1.4rem;
+}
+
+.active {
+  order: -1;
+}
+
+/* main */
+
+main {
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 3rem;
+  margin-inline: 2rem;
+}
+
+/* style articolo */
+article {
+  background-color: #fef7e2;
+  border-radius: 5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+article img {
+  width: 100%; /* or any custom size */
+  height: 100%;
+  object-fit: contain;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.textArticle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 4rem;
+}
+
+.textArticle h3,
+p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* modifica il peso del prezzo */
+.textArticle :nth-last-child(1) {
+  font-weight: 400;
+}
+
+/* font size del testo article */
+.textArticle h3 {
+  font-size: 1.5rem;
+}
+
+.textArticle p {
+  font-size: 1.2rem;
+}
+
+article section {
+  display: flex;
+  flex-direction: column;
+}
+
+article button {
+  margin-inline: auto;
+  margin-block: 1rem;
+  background-color: #ffdf7f;
+  border-radius: 5rem;
+  border: none;
+  width: 250px;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* article News */
+.News {
+  padding: 2rem;
+  border-radius: 3rem;
+  text-align: left;
+}
+
+.News h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.News p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* dimensioni tablet */
+@media screen and (min-width: 625px) {
+  header {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  header div {
+    width: 15rem;
+  }
+
+  .logo {
+    width: auto;
+  }
+
+  /* testo logo */
+  .logo span {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+  }
+  /* testo btnMenu */
+  .btnMenu span {
+    font-size: 1.2rem;
+  }
+
+  .active {
+    order: initial;
+  }
+  /* main */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  /* article */
+
+  .articolo {
+    max-width: 350px;
+  }
+
+  .News {
+    max-width: initial;
+  }
+}
+
+/* dimensioni tablet grande/orrintale, nootebook */
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+  }
+  main {
+    margin: 0;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background-color: #fef7e2;
+    border-radius: 0;
+    padding: 20px;
+    margin: 0;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .btnMenu {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .active {
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .News {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .News img {
+    order: -1;
+    max-height: 300px;
+  }
+
+  .News div {
+    margin-left: 1rem;
+  }
+}
